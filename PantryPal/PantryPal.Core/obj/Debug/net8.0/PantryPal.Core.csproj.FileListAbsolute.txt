@@ -1,0 +1,12 @@
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\bin\Debug\net8.0\PantryPal.Core.deps.json
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\bin\Debug\net8.0\PantryPal.Core.dll
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\bin\Debug\net8.0\PantryPal.Core.pdb
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.AssemblyInfoInputs.cache
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.AssemblyInfo.cs
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.csproj.CoreCompileInputs.cache
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.sourcelink.json
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.dll
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\refint\PantryPal.Core.dll
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\PantryPal.Core.pdb
+D:\Work\pantry-pal-v1.0\PantryPal\PantryPal.Core\obj\Debug\net8.0\ref\PantryPal.Core.dll

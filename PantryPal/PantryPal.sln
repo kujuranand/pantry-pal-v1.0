@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantryPal.Mobile", "PantryPal.Mobile\PantryPal.Mobile.csproj", "{453C6BEE-C868-48BA-8006-1A9DC44AF08B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantryPal.Core", "PantryPal.Core\PantryPal.Core.csproj", "{BC2A8074-3F20-40F0-9698-E490B9171A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453C6BEE-C868-48BA-8006-1A9DC44AF08B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BC2A8074-3F20-40F0-9698-E490B9171A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2A8074-3F20-40F0-9698-E490B9171A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2A8074-3F20-40F0-9698-E490B9171A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2A8074-3F20-40F0-9698-E490B9171A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEFF8C53-954C-4D9E-B066-0D6C41065D22}
+	EndGlobalSection
+EndGlobal

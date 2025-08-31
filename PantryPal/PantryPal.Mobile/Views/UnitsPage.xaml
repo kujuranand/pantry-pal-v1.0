@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PantryPal.Mobile.Views.UnitsPage"
-             Title="Units">
-    
-    <VerticalStackLayout Padding="16" Spacing="12">
-        <Label 
-            Text="PantryPal - Units"
-            FontSize="24" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            Text="Prototype - We'll add CRUD next." />
-        
-    </VerticalStackLayout>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PantryPal.Mobile.Views.UnitsPage"
+    Title="Units">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnAddClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="12" RowDefinitions="Auto,*" RowSpacing="8">
+        <Label Text="Manage your measurement units"
+               FontSize="18"
+               FontAttributes="Bold" />
+        <CollectionView
+            x:Name="UnitsCollection"
+            Grid.Row="1"
+            ItemsSource="{Binding}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Edit" BackgroundColor="#2196F3" Invoked="OnEditSwipe" />
+                                <SwipeItem Text="Delete" BackgroundColor="#E53935" IsDestructive="True" Invoked="OnDeleteSwipe" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid Padding="12" ColumnDefinitions="*,Auto" BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#2B2B2B}">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16" />
+                                <Label Text="{Binding Abbrev}" Opacity="0.7" />
+                            </VerticalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1" Spacing="12" VerticalOptions="Center">
+                                <Button Text="Edit" Clicked="OnEditButton" />
+                                <Button Text="Delete" Clicked="OnDeleteButton" TextColor="White" BackgroundColor="#E53935" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

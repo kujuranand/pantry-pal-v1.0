@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PantryPal.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27303d3c6845f5cd11ae978e1485c52c9d9ad47b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d959a0036de44ac90f0abff1b879108ff4112b2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PantryPal.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PantryPal.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

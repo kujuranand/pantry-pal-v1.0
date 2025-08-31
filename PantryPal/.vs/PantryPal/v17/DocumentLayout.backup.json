@@ -62,8 +62,7 @@
               "RelativeToolTip": "PantryPal.Mobile\\AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-30T12:09:25.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T12:09:25.375Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "PantryPal.Mobile\\Views\\SettingsPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-30T12:01:04.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T12:01:04.232Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "PantryPal.Mobile\\Views\\UnitsPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-30T12:00:50.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T12:00:50.825Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "PantryPal.Mobile\\Views\\CategoriesPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-30T12:00:33.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T12:00:33.587Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "PantryPal.Core\\Models\\Unit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T11:52:21.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T11:52:21.624Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "PantryPal.Core\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T11:49:06.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T11:49:06.915Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "PantryPal.Core\\Models\\GroceryListItem.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T11:29:40.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T11:29:40.674Z"
             },
             {
               "$type": "Document",
@@ -166,21 +159,19 @@
               "RelativeToolTip": "PantryPal.Core\\Models\\GroceryList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T11:08:38.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T11:08:38.45Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PantryPal.Mobile",
+              "Title": "PantryPal.Mobile.csproj",
               "DocumentMoniker": "D:\\Work\\pantry-pal-v1.0\\PantryPal\\PantryPal.Mobile\\PantryPal.Mobile.csproj",
               "RelativeDocumentMoniker": "PantryPal.Mobile\\PantryPal.Mobile.csproj",
               "ToolTip": "D:\\Work\\pantry-pal-v1.0\\PantryPal\\PantryPal.Mobile\\PantryPal.Mobile.csproj",
               "RelativeToolTip": "PantryPal.Mobile\\PantryPal.Mobile.csproj",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-30T10:30:24.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T10:30:24.204Z"
             }
           ]
         }

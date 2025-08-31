@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PantryPal.Mobile.Views.ItemEditPage"
+    Title="Item">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+            <Entry x:Name="NameEntry" Placeholder="Name (required)" />
+            <Entry x:Name="BrandEntry" Placeholder="Brand (optional)" />
+
+            <Picker x:Name="CategoryPicker" Title="Category (optional)" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                <Entry x:Name="QtyEntry" Placeholder="Quantity (e.g., 1.5)" Keyboard="Numeric" />
+                <Picker x:Name="UnitPicker" Grid.Column="1" Title="Unit" />
+            </Grid>
+
+            <Entry x:Name="CostEntry" Placeholder="Cost (e.g., 3.80)" Keyboard="Numeric" />
+
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                <CheckBox x:Name="PurchasedCheck" IsChecked="True" />
+                <HorizontalStackLayout Grid.Column="1" Spacing="8" VerticalOptions="Center">
+                    <Label Text="Purchased date" />
+                    <DatePicker x:Name="PurchasedPicker" />
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                <CheckBox x:Name="ExpiryCheck" />
+                <HorizontalStackLayout Grid.Column="1" Spacing="8" VerticalOptions="Center">
+                    <Label Text="Expiry date" />
+                    <DatePicker x:Name="ExpiryPicker" />
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Editor x:Name="NotesEditor" Placeholder="Notes (optional)" AutoSize="TextChanges" />
+
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="End">
+                <Button Text="Cancel" Clicked="OnCancel" />
+                <Button Text="Save" Clicked="OnSave" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

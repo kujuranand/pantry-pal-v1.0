@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PantryPal.Mobile.Views.ListsPage"
-             Title="Lists">
-    
-    <VerticalStackLayout Padding="16" Spacing="12">
-        <Label 
-            Text="PantryPal - Lists"
-            FontSize="24" 
-            FontAttributes="Bold" />
-        
-        <Label 
-            Text="Prototype - We'll add CRUD next." />
-        
-    </VerticalStackLayout>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PantryPal.Mobile.Views.ListsPage"
+    Title="Lists">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New" Clicked="OnNewListClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="12" RowDefinitions="Auto,*" RowSpacing="8">
+        <Label Text="Your grocery lists" FontAttributes="Bold" FontSize="18" />
+        <CollectionView
+            x:Name="ListsCollection"
+            Grid.Row="1"
+            ItemsSource="{Binding}"
+            SelectionMode="Single"
+            SelectionChanged="OnSelectionChanged">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="32" Spacing="8">
+                    <Label Text="No lists yet" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" />
+                    <Label Text="Tap 'New' to create your first list." HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Rename" BackgroundColor="#2196F3" Invoked="OnRenameSwipe" />
+                                <SwipeItem Text="Delete" BackgroundColor="#E53935" IsDestructive="True" Invoked="OnDeleteSwipe" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid Padding="12" ColumnDefinitions="*,Auto" BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#2B2B2B}">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16" />
+                                <HorizontalStackLayout Spacing="16">
+                                    <Label Text="{Binding CreatedDisplay}" Opacity="0.7" />
+                                    <Label Text="{Binding TotalDisplay}" Opacity="0.7" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+
+                            <Button Grid.Column="1" Text="Open" Clicked="OnOpenClicked" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>
-    

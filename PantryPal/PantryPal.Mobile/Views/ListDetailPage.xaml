@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PantryPal.Mobile.Views.ListDetailPage"
+    Title="List">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Rename" Clicked="OnRenameClicked" />
+        <ToolbarItem Text="Add" Clicked="OnAddClicked" Priority="1" Order="Primary" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="12" RowDefinitions="Auto,*,Auto" RowSpacing="8">
+        <HorizontalStackLayout Spacing="16">
+            <Label x:Name="TitleLabel" Text="List" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="TotalLabel" Text="$0.00" FontSize="20" />
+        </HorizontalStackLayout>
+
+        <CollectionView
+            x:Name="ItemsCollection"
+            Grid.Row="1"
+            ItemsSource="{Binding}"
+            SelectionMode="None">
+
+            <CollectionView.Header>
+                <Grid Padding="8,4" ColumnDefinitions="2*,*,*,Auto,Auto,Auto,Auto" BackgroundColor="{AppThemeBinding Light=#EEEEEE, Dark=#3A3A3A}">
+                    <Label Text="Name" FontAttributes="Bold" />
+                    <Label Grid.Column="1" Text="Brand" FontAttributes="Bold" />
+                    <Label Grid.Column="2" Text="Category" FontAttributes="Bold" />
+                    <Label Grid.Column="3" Text="Qty" FontAttributes="Bold" HorizontalTextAlignment="End" />
+                    <Label Grid.Column="4" Text="Unit" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Grid.Column="5" Text="Cost" FontAttributes="Bold" HorizontalTextAlignment="End" />
+                    <Label Grid.Column="6" Text="Dates" FontAttributes="Bold" />
+                </Grid>
+            </CollectionView.Header>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Edit" BackgroundColor="#2196F3" Invoked="OnEditSwipe" />
+                                <SwipeItem Text="Delete" BackgroundColor="#E53935" IsDestructive="True" Invoked="OnDeleteSwipe" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid Padding="8,6" ColumnDefinitions="2*,*,*,Auto,Auto,Auto,Auto">
+                            <Label Text="{Binding Name}" />
+                            <Label Grid.Column="1" Text="{Binding Brand}" />
+                            <Label Grid.Column="2" Text="{Binding CategoryName}" />
+                            <Label Grid.Column="3" Text="{Binding Quantity, StringFormat='{0:0.##}'}" HorizontalTextAlignment="End" />
+                            <Label Grid.Column="4" Text="{Binding UnitAbbrev}" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="5" Text="{Binding Cost, StringFormat='${0:0.00}'}" HorizontalTextAlignment="End" />
+                            <Label Grid.Column="6" Text="{Binding DatesDisplay}" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <HorizontalStackLayout Grid.Row="2" HorizontalOptions="End" Spacing="12">
+            <Label Text="Total:" FontSize="18" />
+            <Label x:Name="BottomTotalLabel" Text="$0.00" FontSize="18" FontAttributes="Bold" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

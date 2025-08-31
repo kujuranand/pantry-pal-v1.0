@@ -1,0 +1,37 @@
+# IDE
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+**/bin/
+**/obj/
+[Bb]uild/
+[Bb]uilds/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+**/project.assets.json
+**/*.nuget.g.props
+**/*.nuget.g.targets
+packages/
+project.lock.json
+
+# Android (MAUI)
+*.apk
+*.aab
+*.ap_
+*.keystore
+.keystore
+
+# Logs & misc
+*.log
+*.tlog
+*.pidb
+*.svclog
+*.DS_Store
+Thumbs.db

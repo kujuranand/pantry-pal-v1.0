@@ -10,20 +10,42 @@
         <ToolbarItem Text="Add" Clicked="OnAddClicked" Priority="1" Order="Primary" />
     </ContentPage.ToolbarItems>
 
-    <Grid Padding="12" RowDefinitions="Auto,*,Auto" RowSpacing="8">
+    <!-- Layout: Header → Controls (Search + Category) → Items → Bottom Total -->
+    <Grid Padding="12" RowSpacing="8"
+          RowDefinitions="Auto,Auto,*,Auto">
+
+        <!-- 0: Header -->
         <HorizontalStackLayout Spacing="16">
             <Label x:Name="TitleLabel" Text="List" FontSize="20" FontAttributes="Bold" />
             <Label x:Name="TotalLabel" Text="$0.00" FontSize="20" />
         </HorizontalStackLayout>
 
+        <!-- 1: Controls -->
+        <VerticalStackLayout Grid.Row="1" Spacing="8">
+            <SearchBar x:Name="ItemSearchBar"
+                       Placeholder="Search items..."
+                       TextChanged="OnSearchTextChanged" />
+
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                <Label Text="Category:" VerticalTextAlignment="Center" />
+                <Picker x:Name="CategoryFilterPicker"
+                        Grid.Column="1"
+                        Title="All categories"
+                        SelectedIndexChanged="OnCategoryFilterChanged" />
+            </Grid>
+        </VerticalStackLayout>
+
+        <!-- 2: Items -->
         <CollectionView
             x:Name="ItemsCollection"
-            Grid.Row="1"
+            Grid.Row="2"
             ItemsSource="{Binding}"
             SelectionMode="None">
 
             <CollectionView.Header>
-                <Grid Padding="8,4" ColumnDefinitions="2*,*,*,Auto,Auto,Auto,Auto" BackgroundColor="{AppThemeBinding Light=#EEEEEE, Dark=#3A3A3A}">
+                <Grid Padding="8,4"
+                      ColumnDefinitions="2*,*,*,Auto,Auto,Auto,Auto"
+                      BackgroundColor="{AppThemeBinding Light=#EEEEEE, Dark=#3A3A3A}">
                     <Label Text="Name" FontAttributes="Bold" />
                     <Label Grid.Column="1" Text="Brand" FontAttributes="Bold" />
                     <Label Grid.Column="2" Text="Category" FontAttributes="Bold" />
@@ -58,7 +80,8 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <HorizontalStackLayout Grid.Row="2" HorizontalOptions="End" Spacing="12">
+        <!-- 3: Bottom total (of filtered view) -->
+        <HorizontalStackLayout Grid.Row="3" HorizontalOptions="End" Spacing="12">
             <Label Text="Total:" FontSize="18" />
             <Label x:Name="BottomTotalLabel" Text="$0.00" FontSize="18" FontAttributes="Bold" />
         </HorizontalStackLayout>

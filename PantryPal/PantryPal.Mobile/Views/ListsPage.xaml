@@ -9,11 +9,45 @@
         <ToolbarItem Text="New" Clicked="OnNewListClicked" />
     </ContentPage.ToolbarItems>
 
-    <Grid Padding="12" RowDefinitions="Auto,*" RowSpacing="8">
-        <Label Text="Your grocery lists" FontAttributes="Bold" FontSize="18" />
+    <!-- More generous padding + clear row layout -->
+    <Grid Padding="16" RowSpacing="12"
+          RowDefinitions="Auto,Auto,Auto,*">
+
+        <!-- 0: Section title -->
+        <Label Text="Your grocery lists"
+               FontAttributes="Bold"
+               FontSize="18"
+               Margin="0,0,0,4" />
+
+        <!-- 1: Search -->
+        <SearchBar
+            x:Name="ListSearchBar"
+            Grid.Row="1"
+            Placeholder="Search lists..."
+            Margin="0,0,0,4"
+            TextChanged="OnSearchTextChanged" />
+
+        <!-- 2: Sort controls -->
+        <HorizontalStackLayout Grid.Row="2"
+                               Spacing="16"
+                               VerticalOptions="Center"
+                               Margin="0,0,0,4">
+            <Label Text="Sort:" VerticalTextAlignment="Center" />
+            <RadioButton x:Name="SortNewest"
+                         Content="Newest"
+                         GroupName="ListSort"
+                         IsChecked="True"
+                         CheckedChanged="OnSortCheckedChanged" />
+            <RadioButton x:Name="SortOldest"
+                         Content="Oldest"
+                         GroupName="ListSort"
+                         CheckedChanged="OnSortCheckedChanged" />
+        </HorizontalStackLayout>
+
+        <!-- 3: Lists -->
         <CollectionView
             x:Name="ListsCollection"
-            Grid.Row="1"
+            Grid.Row="3"
             ItemsSource="{Binding}"
             SelectionMode="Single"
             SelectionChanged="OnSelectionChanged">
@@ -35,8 +69,11 @@
                             </SwipeItems>
                         </SwipeView.RightItems>
 
-                        <Grid Padding="12" ColumnDefinitions="*,Auto" BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#2B2B2B}">
-                            <VerticalStackLayout>
+                        <Grid Padding="12"
+                              ColumnDefinitions="*,Auto"
+                              Margin="0,0,0,8"
+                              BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#2B2B2B}">
+                            <VerticalStackLayout Spacing="4">
                                 <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16" />
                                 <HorizontalStackLayout Spacing="16">
                                     <Label Text="{Binding CreatedDisplay}" Opacity="0.7" />
@@ -44,7 +81,10 @@
                                 </HorizontalStackLayout>
                             </VerticalStackLayout>
 
-                            <Button Grid.Column="1" Text="Open" Clicked="OnOpenClicked" />
+                            <Button Grid.Column="1"
+                                    Text="Open"
+                                    VerticalOptions="Center"
+                                    Clicked="OnOpenClicked" />
                         </Grid>
                     </SwipeView>
                 </DataTemplate>
